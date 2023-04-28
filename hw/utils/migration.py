@@ -6,9 +6,10 @@ from pymongo import MongoClient
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hw.settings')
 django.setup()
 
-from app_quotes.models import Quote, Author, Tag
+from app_quotes.models import Quote, Author, Tag # noqa
 
-client = MongoClient('http://localhost')
+
+client = MongoClient('mongodb://localhost')
 
 db = client.hw10
 
