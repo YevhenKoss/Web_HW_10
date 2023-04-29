@@ -1,37 +1,32 @@
 {% extends "app_quotes/base.html" %}
 
-
 {% block content %}
 
 <form method="POST" action="{% url 'app_quotes:add_author' %}">
     {% csrf_token %}
     <div style="padding: 10px">
-        <label> Fullname:
-            {{ form.fullname }}
-        </label>
+        <label> Fullname: </label>
+        <input type="text" class="form-control" {{ form.fullname }}
         <span>{{ form.errors.fullname }}</span>
     </div>
     <div style="padding: 10px">
-        <label> Born Date:
-            {{ form.born_date }}
-        </label>
+        <label> Born Date: </label>
+        <input type="text" class="form-control" {{ form.born_date }}
         <span>{{ form.errors.born_date }}</span>
     </div>
     <div style="padding: 10px">
-        <label> Born Location:
-            {{ form.born_location }}
-        </label>
+        <label> Born Location: </label>
+        <input type="text" class="form-control" {{ form.born_location }}
         <span>{{ form.errors.born_location }}</span>
     </div>
     <div style="padding: 10px">
-        <label> Description:
-            {{ form.description }}
-        </label>
+        <label> Description: </label>
+        <input type="text" class="form-control" {{ form.description }}
         <span>{{ form.errors.description }}</span>
     </div>
     <div class="grid">
-        <button type="submit">Submit</button>
-        <button type="reset" class="secondary">Reset</button>
+        <button type="submit" class="btn btn-light">Submit</button>
+        <button type="reset" class="btn btn-light">Reset</button>
     </div>
 </form>
 {% endblock %}

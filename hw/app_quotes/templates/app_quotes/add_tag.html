@@ -5,14 +5,13 @@
 <form method="POST" action="{% url 'app_quotes:add_tag' %}">
     {% csrf_token %}
     <div style="padding: 10px">
-        <label> Tags:
-            {{ form.tag }}
-        </label>
+        <label> Tags: </label>
+        <input type="text" class="form-control" {{ form.tag }}
         <span>{{ form.errors.tag }}</span>
     </div>
     <div class="grid">
-        <button type="submit">Submit</button>
-        <button type="reset" class="secondary">Reset</button>
+        <button type="submit" class="btn btn-light">Submit</button>
+        <button type="reset" class="btn btn-light">Reset</button>
     </div>
 </form>
 {% endblock %}
