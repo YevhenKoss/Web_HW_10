@@ -14,6 +14,7 @@ mongoengine = "^0.27.0"
 psycopg2 = "^2.9.6"
 django-crispy-forms = "^2.0"
 crispy-bootstrap4 = "^2022.1"
+django-environ = "^0.10.0"
 
 
 [build-system]
