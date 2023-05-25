@@ -135,3 +135,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #
 # CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.meta.ua'
+EMAIL_PORT = 465
+EMAIL_STARTTLS = False
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = 'yekoss@meta.ua'
+EMAIL_HOST_PASSWORD = 'vivBydiac9'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
